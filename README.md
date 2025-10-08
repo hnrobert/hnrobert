@@ -1,7 +1,6 @@
 # Most Used Languages
 
-[![Language uses](https://github-readme-stats.vercel.app/api/top-langs/?username=hnrobert&layout=compact)](https://github.com/hnrobert)
-
+[![Language uses](https://github-readme-stats.vercel.app/api/top-langs/?username=hnrobert&layout=compact&hide=HTML,Smarty,AngelScript&langs_count=8)](https://github.com/hnrobert?tab=repositories)
 
 <!--
 **hnrobert/hnrobert** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -14,6 +13,6 @@ Here are some ideas to get you started:
 - 🤔 I’m looking for help with ...
 - 💬 Ask me about ...
 - 📫 How to reach me: ...
-- 😄 Pronouns: ...
+- 😄 Pronouns: ...˜
 - ⚡ Fun fact: ...
 -->
