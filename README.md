@@ -1,4 +1,7 @@
-## Hi there 👋
+# Most Used Languages
+
+[![Language uses](https://github-readme-stats.vercel.app/api/top-langs/?username=hnrobert&layout=compact)](https://github.com/hnrobert)
+
 
 <!--
 **hnrobert/hnrobert** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
