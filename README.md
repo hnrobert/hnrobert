@@ -1,8 +1,10 @@
-# HNRobert's GitHub stats
+# Hi, I'm Robert He ;)
 
-[![HNRobert's GitHub stats](https://github-readme-stats.vercel.app/api?username=hnrobert&show_icons=true&theme=dark)](https://github.com/hnrobert?tab=repositories)
+## GitHub stats
 
-# Most Used Languages
+[![GitHub stats](https://github-readme-stats.vercel.app/api?username=hnrobert&show_icons=true&theme=light)](https://github.com/hnrobert?tab=repositories)
+
+## Language uses
 
 [![Language uses](https://github-readme-stats.vercel.app/api/top-langs/?username=hnrobert&layout=compact&hide=HTML,Smarty,AngelScript&langs_count=8&card_width=470)](https://github.com/hnrobert?tab=repositories)
 
