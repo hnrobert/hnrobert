@@ -78,7 +78,7 @@ jobs:
           exclude_languages: "HTML,Jupyter Notebook,CSS,AngelScript"
 
           # Comma-separated owner/repo pairs to exclude from language stats
-          exclude_repos: "hnrobert/Vision-VSCode-Radar-2025,unnc-aim/Vision-VSCode-Radar-2025,unnc-aim/RAW-RM-VISION,hnrobert/UNNC-CSY4-CG-CW-macOS-Compatible-Template"
+          exclude_repos: "hnrobert/Vision-VSCode-Radar-2025,unnc-aim/Vision-VSCode-Radar-2025,unnc-aim/RAW-RM-VISION,hnrobert/UNNC-CSY4-CG-CW-macOS-Compatible-Template,hnrobert/sterculius"
 
           # Comma-separated owner/repo pairs to exclude from contribution stats only
           contrib_exclude_repos: "hnrobert/Vision-VSCode-Radar-2025"
