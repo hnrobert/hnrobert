@@ -19,20 +19,28 @@
 
 </br>
 
-<div align="center">
-  <img src="https://gh-readme-stats.vercel.app/api?username=hnrobert&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" alt="GitHub Stats" height="170"/>
-  <img src="https://gh-readme-stats.vercel.app/api/top-langs/?username=hnrobert&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&hide=HTML,Smarty,AngelScript" alt="Top Languages" height="170"/>
+<div align="center" style="max-width:800px;margin:0 auto">
+<img src="https://raw.githubusercontent.com/hnrobert/hnrobert/github-stats-enhanced/stats1-adaptive.svg" width="22%" alt="Stats 1" hspace="4" /><img src="https://raw.githubusercontent.com/hnrobert/hnrobert/github-stats-enhanced/stats2-adaptive.svg" width="22%" alt="Stats 2" hspace="4" /><img src="https://raw.githubusercontent.com/hnrobert/hnrobert/github-stats-enhanced/contributions-adaptive.svg" width="51%" alt="Contributions" hspace="4" />
+
+<br/>
+
+<img src="https://raw.githubusercontent.com/hnrobert/hnrobert/github-stats-enhanced/languages-adaptive.svg" width="97%" alt="Languages" />
 </div>
 
-</br>
+<!-- <div align="center">
+  <img src="https://gh-readme-stats.vercel.app/api?username=hnrobert&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" alt="GitHub Stats" height="170"/>
+  <img src="https://gh-readme-stats.vercel.app/api/top-langs/?username=hnrobert&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&hide=HTML,Smarty,AngelScript" alt="Top Languages" height="170"/>
+</div> -->
+
+<!-- </br> -->
 
 <!--[![GitHub stats](https://github-readme-stats.vercel.app/api?username=hnrobert&show_icons=true&theme=light)](https://github.com/hnrobert?tab=repositories) -->
 <!--[![](http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=hnrobert&theme=dark&utcOffset=8)](https://github.com/hnrobert?tab=repositories)-->
 
 <!--[![Language uses](https://github-readme-stats.vercel.app/api/top-langs/?username=hnrobert&layout=compact&hide=HTML,Smarty,AngelScript&langs_count=8&card_width=467)](https://github.com/hnrobert?tab=repositories)-->
-<div align="center">
+<!-- <div align="center">
   <img src="https://raw.githubusercontent.com/hnrobert/hnrobert/output/github-contribution-grid-snake.svg" alt="Snake animation" width="467" />
-</div>
+</div> -->
 
 <!--
 **hnrobert/hnrobert** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
