@@ -1,0 +1,58 @@
+# Copy this file to .github/workflows/github-stats.yml in your profile repo
+# (the repo named <your-username>/<your-username>)
+#
+# Required: add GITHUB_TOKEN to your repo secrets, or rely on the auto-provided one.
+# The generated SVGs are pushed to the `output` branch and can be referenced
+# in your profile README as:
+#
+#   ![Stats](https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/output/stats-adaptive.svg)
+#   ![Languages](https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/output/languages-adaptive.svg)
+#   ![Contributions](https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/output/contributions-adaptive.svg)
+
+name: GitHub Stats
+
+on:
+  schedule:
+    - cron: "30 0 * * *"   # daily at 00:30 UTC
+  push:
+    paths:
+      - ".github/workflows/github-stats.yml"
+  workflow_dispatch:
+    inputs:
+      username:
+        description: "GitHub username (defaults to repo owner)"
+        required: false
+      theme:
+        description: "Card theme: adaptive, dark, or light"
+        required: false
+        default: "adaptive"
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate GitHub Stats SVGs
+        uses: hnrobert/github-stats-enhanced@main
+        with:
+          github_user_name: ${{ inputs.username || github.repository_owner }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          output_dir: dist
+          theme: ${{ inputs.theme || 'adaptive' }}
+          # Optional: comma-separated languages to exclude from the languages card
+          # exclude_languages: "HTML,CSS,SCSS"
+          # Optional: comma-separated owner/repo pairs to exclude from stats
+          # exclude_repos: "your-username/some-private-repo"
+
+      - name: Deploy to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+          commit_message: "chore: update GitHub stats [skip ci]"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
