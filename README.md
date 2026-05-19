@@ -20,11 +20,11 @@
 </br>
 
 <div align="center" style="max-width:800px;margin:0 auto">
-<img src="https://raw.githubusercontent.com/hnrobert/hnrobert/github-stats-enhanced/stats1-adaptive.svg" width="22%" alt="Stats 1" hspace="4" /><img src="https://raw.githubusercontent.com/hnrobert/hnrobert/github-stats-enhanced/stats2-adaptive.svg" width="22%" alt="Stats 2" hspace="4" /><img src="https://raw.githubusercontent.com/hnrobert/hnrobert/github-stats-enhanced/contributions-adaptive.svg" width="51%" alt="Contributions" hspace="4" />
+<a href="https://github.com/hnrobert/hnrobert/tree/github-stats-enhanced"><img src="https://raw.githubusercontent.com/hnrobert/hnrobert/github-stats-enhanced/stats1-adaptive.svg" width="22%" alt="Stats 1" hspace="4" /></a><a href="https://github.com/hnrobert/hnrobert/tree/github-stats-enhanced"><img src="https://raw.githubusercontent.com/hnrobert/hnrobert/github-stats-enhanced/stats2-adaptive.svg" width="22%" alt="Stats 2" hspace="4" /></a><a href="https://github.com/hnrobert/hnrobert/tree/github-stats-enhanced"><img src="https://raw.githubusercontent.com/hnrobert/hnrobert/github-stats-enhanced/contributions-adaptive.svg" width="51%" alt="Contributions" hspace="4" /></a>
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/hnrobert/hnrobert/github-stats-enhanced/languages-adaptive.svg" width="97%" alt="Languages" />
+<a href="https://github.com/hnrobert/hnrobert/tree/github-stats-enhanced"><img src="https://raw.githubusercontent.com/hnrobert/hnrobert/github-stats-enhanced/languages-adaptive.svg" width="97%" alt="Languages" /></a>
 </div>
 
 <!-- <div align="center">
