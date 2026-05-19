@@ -2,18 +2,24 @@
 # (the repo named <your-username>/<your-username>)
 #
 # Required: add GITHUB_TOKEN to your repo secrets, or rely on the auto-provided one.
-# The generated SVGs are pushed to the `output` branch and can be referenced
+# The generated SVGs are pushed to the `github-stats-enhanced` branch and can be referenced
 # in your profile README as:
 #
-#   ![Stats](https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/output/stats-adaptive.svg)
-#   ![Languages](https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/output/languages-adaptive.svg)
-#   ![Contributions](https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/output/contributions-adaptive.svg)
+#   ![Stats1](https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/github-stats-enhanced/stats1-adaptive.svg)
+#   ![Stats2](https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/github-stats-enhanced/stats2-adaptive.svg)
+#   ![Contributions](https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/github-stats-enhanced/contributions-adaptive.svg)
+#   ![Languages](https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/github-stats-enhanced/languages-adaptive.svg)
+#
+# Pipeline modes:
+#   mode: "all"      — fetch from GitHub API + generate SVGs in one step (default)
+#   mode: "fetch"    — fetch from GitHub API and save to stats.yml only
+#   mode: "generate" — read stats.yml and generate SVGs only (no API call)
 
 name: GitHub Stats
 
 on:
   schedule:
-    - cron: "30 0 * * *"   # daily at 00:30 UTC
+    - cron: "30 0 * * *" # daily at 00:30 UTC
   push:
     paths:
       - ".github/workflows/github-stats.yml"
@@ -27,6 +33,7 @@ on:
         required: false
         default: "adaptive"
 
+# ── Option A: single-step (default) ──────────────────────────────────────────
 jobs:
   generate:
     runs-on: ubuntu-latest
@@ -34,25 +41,104 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@main
 
       - name: Generate GitHub Stats SVGs
         uses: hnrobert/github-stats-enhanced@main
         with:
           github_user_name: ${{ inputs.username || github.repository_owner }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          output_dir: dist
-          theme: ${{ inputs.theme || 'adaptive' }}
-          # Optional: comma-separated languages to exclude from the languages card
-          # exclude_languages: "HTML,CSS,SCSS"
-          # Optional: comma-separated owner/repo pairs to exclude from stats
-          # exclude_repos: "your-username/some-private-repo"
 
-      - name: Deploy to output branch
-        uses: crazy-max/ghaction-github-pages@v4
+          # Pipeline mode: "all" | "fetch" | "generate"
+          mode: "all"
+
+          # Output directory for generated SVG files
+          output_dir: dist
+
+          # Card theme: adaptive (follows system dark/light), dark, light
+          theme: ${{ inputs.theme || 'adaptive' }}
+
+          # Responsive SVGs (width="100%", scales to container)
+          # Set to "false" for fixed pixel dimensions
+          responsive: "true"
+          generate_report: "true"   # also writes README.md + index.html
+
+          # --- Card dimensions (pixels) ---
+          # stats_width: "220"
+          # stats_height: "200"
+          # contributions_width: "460"
+          # contributions_height: "180"
+          # languages_width: "500"
+
+          # Number of languages to display (default: 8)
+          # languages_count: "8"
+
+          # Comma-separated languages to exclude from language stats
+          exclude_languages: "HTML,Jupyter Notebook,CSS,AngelScript"
+
+          # Comma-separated owner/repo pairs to exclude from language stats
+          exclude_repos: "hnrobert/Vision-VSCode-Radar-2025,unnc-aim/Vision-VSCode-Radar-2025,unnc-aim/RAW-RM-VISION,hnrobert/UNNC-CSY4-CG-CW-macOS-Compatible-Template"
+
+          # Comma-separated owner/repo pairs to exclude from contribution stats only
+          contrib_exclude_repos: "hnrobert/Vision-VSCode-Radar-2025"
+
+      - name: Deploy to github-stats-enhanced branch
+        uses: crazy-max/ghaction-github-pages@v5
         with:
-          target_branch: output
+          target_branch: github-stats-enhanced
           build_dir: dist
           commit_message: "chore: update GitHub stats [skip ci]"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+# ── Option B: two-step (fetch → generate) ────────────────────────────────────
+# Useful when you want to cache stats.yml and regenerate cards without re-fetching.
+#
+# jobs:
+#   fetch:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@main
+#       - name: Fetch GitHub Stats
+#         uses: hnrobert/github-stats-enhanced@main
+#         with:
+#           github_user_name: ${{ github.repository_owner }}
+#           github_token: ${{ secrets.GITHUB_TOKEN }}
+#           mode: "fetch"
+#           data_file: dist/stats.yml
+#           output_dir: dist
+#       - uses: actions/upload-artifact@v4
+#         with:
+#           name: stats-data
+#           path: dist/stats.yml
+#
+#   generate:
+#     needs: fetch
+#     runs-on: ubuntu-latest
+#     permissions:
+#       contents: write
+#     steps:
+#       - uses: actions/checkout@main
+#       - uses: actions/download-artifact@v4
+#         with:
+#           name: stats-data
+#           path: dist
+#       - name: Generate SVGs from stats.yml
+#         uses: hnrobert/github-stats-enhanced@main
+#         with:
+#           github_user_name: ${{ github.repository_owner }}
+#           mode: "generate"
+#           data_file: dist/stats.yml
+#           output_dir: dist
+#           theme: adaptive
+#           responsive: "true"
+#           # exclude_languages: "HTML,CSS"
+#           # exclude_repos: "your-username/some-repo"
+#           # contrib_exclude_repos: "your-username/some-repo"
+#       - uses: crazy-max/ghaction-github-pages@v5
+#         with:
+#           target_branch: github-stats-enhanced
+#           build_dir: dist
+#           commit_message: "chore: update GitHub stats [skip ci]"
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
