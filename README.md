@@ -9,12 +9,12 @@
   <a href="https://github.com/hnrobert">
     <img src="https://komarev.com/ghpvc/?username=hnrobert&label=Profile%20Views&color=0e75b6&style=flat" alt="Profile Views" />
   </a>
-  <a href="https://github.com/hnrobert?tab=followers">
+  <!-- <a href="https://github.com/hnrobert?tab=followers">
     <img src="https://img.shields.io/github/followers/hnrobert?label=Followers&style=social" alt="GitHub followers" />
   </a>
   <a href="https://github.com/hnrobert">
     <img src="https://img.shields.io/github/stars/hnrobert?label=Stars&style=social" alt="GitHub Stars" />
-  </a>
+  </a> -->
 </div>
 
 </br>
