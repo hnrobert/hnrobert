@@ -1,0 +1,31 @@
+<svg width="222" height="202" viewBox="-1 -1 222 202" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    
+    @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    .card{animation:fadeUp .5s cubic-bezier(.33,1,.68,1) both}
+    .title{animation:fadeUp .45s .08s cubic-bezier(.33,1,.68,1) both}
+    .i0{animation:fadeUp .45s .14s cubic-bezier(.33,1,.68,1) both}
+    .i1{animation:fadeUp .45s .24s cubic-bezier(.33,1,.68,1) both}
+    .i2{animation:fadeUp .45s .34s cubic-bezier(.33,1,.68,1) both}
+    .i3{animation:fadeUp .45s .44s cubic-bezier(.33,1,.68,1) both}
+    .i4{animation:fadeUp .45s .54s cubic-bezier(.33,1,.68,1) both}
+    .bar{animation:fadeIn .3s .25s ease both}
+  </style>
+  <rect class="card" width="220" height="200" rx="16" fill="rgba(15,23,42,0.8)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  
+    <g class="i0">
+    <g transform="translate(73.3,38.666666666666664)" fill="#cbd5e1"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></g>
+    <text x="96.3" y="46.666666666666664" dominant-baseline="central" fill="#f8fafc" font-size="28" font-weight="700"
+      text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">116</text>
+    <text x="110" y="77.16666666666666" dominant-baseline="central" fill="#cbd5e1" font-size="13" font-weight="500"
+      text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">Public Repos</text>
+    </g>
+    <g class="i1">
+    <g transform="translate(73.3,122.33333333333331)" fill="#cbd5e1"><path d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"></path></g>
+    <text x="96.3" y="130.33333333333331" dominant-baseline="central" fill="#f8fafc" font-size="28" font-weight="700"
+      text-anchor="start" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">174</text>
+    <text x="110" y="160.83333333333331" dominant-baseline="central" fill="#cbd5e1" font-size="13" font-weight="500"
+      text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">Contributed Repos</text>
+    </g>
+</svg>

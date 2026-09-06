@@ -1,0 +1,100 @@
+<svg width="100%" viewBox="-1 -1 502 108" style="min-width:300px" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    
+    svg{--s-bg:rgba(255,255,255,0.8);--s-bd:rgba(0,0,0,0.1);--s-tp:#1f2937;
+      --s-ts:#6b7280;--s-ac:#3b82f6;--s-pb:#fae8ff;}
+    @media(prefers-color-scheme:dark){svg{
+      --s-bg:rgba(15,23,42,0.8);--s-bd:rgba(255,255,255,0.1);--s-tp:#f8fafc;
+      --s-ts:#cbd5e1;--s-ac:#60a5fa;--s-pb:#334155;}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    .card{animation:fadeUp .5s cubic-bezier(.33,1,.68,1) both}
+    .title{animation:fadeUp .45s .08s cubic-bezier(.33,1,.68,1) both}
+    .i0{animation:fadeUp .45s .14s cubic-bezier(.33,1,.68,1) both}
+    .i1{animation:fadeUp .45s .24s cubic-bezier(.33,1,.68,1) both}
+    .i2{animation:fadeUp .45s .34s cubic-bezier(.33,1,.68,1) both}
+    .i3{animation:fadeUp .45s .44s cubic-bezier(.33,1,.68,1) both}
+    .i4{animation:fadeUp .45s .54s cubic-bezier(.33,1,.68,1) both}
+    .bar{animation:fadeIn .3s .25s ease both}
+  </style>
+  <rect class="card" width="100%" height="106" rx="10" fill="var(--s-bg)" stroke="var(--s-bd)" stroke-width="0.5"/>
+  <svg x="50%" y="0" width="500" height="100%" overflow="visible"><g transform="translate(-250, 0)">
+  <g class="title">
+  <text x="250" y="24" fill="var(--s-tp)" font-size="14" font-weight="600"
+    text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">Most Used Languages</text>
+  </g>
+  <rect x="28" y="36" width="444" height="8" rx="5" fill="var(--s-pb)" class="bar"/>
+  <clipPath id="bc">
+    <rect x="28" y="36" width="0" height="8" rx="5">
+      <animate attributeName="width" from="0" to="444" dur="0.7s" begin="0.2s"
+        calcMode="spline" keySplines="0.4 0 0.2 1" fill="freeze"/>
+    </rect>
+  </clipPath>
+  <g clip-path="url(#bc)" class="bar"><rect x="28" y="36" width="165" height="8" fill="#239120"/><rect x="193" y="36" width="93" height="8" fill="#3178c6"/><rect x="286" y="36" width="52" height="8" fill="#3572A5"/><rect x="338" y="36" width="46" height="8" fill="#4FC08D"/><rect x="384" y="36" width="32" height="8" fill="#dea584"/><rect x="416" y="36" width="24" height="8" fill="#f34b7d"/><rect x="440" y="36" width="24" height="8" fill="#00ADD8"/><rect x="464" y="36" width="8" height="8" fill="#ffac45"/></g>
+  <g style="animation:fadeUp .4s 0.30s cubic-bezier(.33,1,.68,1) both">
+        <rect x="50" y="54" width="76" height="16" rx="6"
+          fill="rgba(128,128,128,0.07)" stroke="rgba(128,128,128,0.15)" stroke-width="1"/>
+        <circle cx="60" cy="62" r="4" fill="#239120"/>
+        <text x="70" y="66" fill="var(--s-tp)" font-size="10"
+          font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">C#</text>
+        <text x="120" y="66" fill="var(--s-ts)" font-size="9"
+          font-weight="600" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">35.1%</text>
+      </g><g style="animation:fadeUp .4s 0.37s cubic-bezier(.33,1,.68,1) both">
+        <rect x="134" y="54" width="124" height="16" rx="6"
+          fill="rgba(128,128,128,0.07)" stroke="rgba(128,128,128,0.15)" stroke-width="1"/>
+        <circle cx="144" cy="62" r="4" fill="#3178c6"/>
+        <text x="154" y="66" fill="var(--s-tp)" font-size="10"
+          font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">TypeScript</text>
+        <text x="252" y="66" fill="var(--s-ts)" font-size="9"
+          font-weight="600" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">19.9%</text>
+      </g><g style="animation:fadeUp .4s 0.44s cubic-bezier(.33,1,.68,1) both">
+        <rect x="266" y="54" width="100" height="16" rx="6"
+          fill="rgba(128,128,128,0.07)" stroke="rgba(128,128,128,0.15)" stroke-width="1"/>
+        <circle cx="276" cy="62" r="4" fill="#3572A5"/>
+        <text x="286" y="66" fill="var(--s-tp)" font-size="10"
+          font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">Python</text>
+        <text x="360" y="66" fill="var(--s-ts)" font-size="9"
+          font-weight="600" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">11.1%</text>
+      </g><g style="animation:fadeUp .4s 0.51s cubic-bezier(.33,1,.68,1) both">
+        <rect x="374" y="54" width="76" height="16" rx="6"
+          fill="rgba(128,128,128,0.07)" stroke="rgba(128,128,128,0.15)" stroke-width="1"/>
+        <circle cx="384" cy="62" r="4" fill="#4FC08D"/>
+        <text x="394" y="66" fill="var(--s-tp)" font-size="10"
+          font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">Vue</text>
+        <text x="444" y="66" fill="var(--s-ts)" font-size="9"
+          font-weight="600" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">9.7%</text>
+      </g><g style="animation:fadeUp .4s 0.58s cubic-bezier(.33,1,.68,1) both">
+        <rect x="80" y="76" width="82" height="16" rx="6"
+          fill="rgba(128,128,128,0.07)" stroke="rgba(128,128,128,0.15)" stroke-width="1"/>
+        <circle cx="90" cy="84" r="4" fill="#dea584"/>
+        <text x="100" y="88" fill="var(--s-tp)" font-size="10"
+          font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">Rust</text>
+        <text x="156" y="88" fill="var(--s-ts)" font-size="9"
+          font-weight="600" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">6.8%</text>
+      </g><g style="animation:fadeUp .4s 0.65s cubic-bezier(.33,1,.68,1) both">
+        <rect x="170" y="76" width="76" height="16" rx="6"
+          fill="rgba(128,128,128,0.07)" stroke="rgba(128,128,128,0.15)" stroke-width="1"/>
+        <circle cx="180" cy="84" r="4" fill="#f34b7d"/>
+        <text x="190" y="88" fill="var(--s-tp)" font-size="10"
+          font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">C++</text>
+        <text x="240" y="88" fill="var(--s-ts)" font-size="9"
+          font-weight="600" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">5.2%</text>
+      </g><g style="animation:fadeUp .4s 0.72s cubic-bezier(.33,1,.68,1) both">
+        <rect x="254" y="76" width="70" height="16" rx="6"
+          fill="rgba(128,128,128,0.07)" stroke="rgba(128,128,128,0.15)" stroke-width="1"/>
+        <circle cx="264" cy="84" r="4" fill="#00ADD8"/>
+        <text x="274" y="88" fill="var(--s-tp)" font-size="10"
+          font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">Go</text>
+        <text x="318" y="88" fill="var(--s-ts)" font-size="9"
+          font-weight="600" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">5.0%</text>
+      </g><g style="animation:fadeUp .4s 0.79s cubic-bezier(.33,1,.68,1) both">
+        <rect x="332" y="76" width="88" height="16" rx="6"
+          fill="rgba(128,128,128,0.07)" stroke="rgba(128,128,128,0.15)" stroke-width="1"/>
+        <circle cx="342" cy="84" r="4" fill="#ffac45"/>
+        <text x="352" y="88" fill="var(--s-tp)" font-size="10"
+          font-weight="500" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">Swift</text>
+        <text x="414" y="88" fill="var(--s-ts)" font-size="9"
+          font-weight="600" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">1.6%</text>
+      </g>
+  </g></svg>
+</svg>

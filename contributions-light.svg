@@ -1,0 +1,53 @@
+<svg width="462" height="182" viewBox="-1 -1 462 182" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    
+    @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    .card{animation:fadeUp .5s cubic-bezier(.33,1,.68,1) both}
+    .title{animation:fadeUp .45s .08s cubic-bezier(.33,1,.68,1) both}
+    .i0{animation:fadeUp .45s .14s cubic-bezier(.33,1,.68,1) both}
+    .i1{animation:fadeUp .45s .24s cubic-bezier(.33,1,.68,1) both}
+    .i2{animation:fadeUp .45s .34s cubic-bezier(.33,1,.68,1) both}
+    .i3{animation:fadeUp .45s .44s cubic-bezier(.33,1,.68,1) both}
+    .i4{animation:fadeUp .45s .54s cubic-bezier(.33,1,.68,1) both}
+    .bar{animation:fadeIn .3s .25s ease both}
+  </style>
+  <rect class="card" width="460" height="180" rx="16" fill="rgba(255,255,255,0.8)" stroke="rgba(0,0,0,0.1)" stroke-width="1"/>
+  <line x1="184" y1="30" x2="184" y2="150"
+    stroke="rgba(0,0,0,0.1)" stroke-width="1"/>
+    <g class="i0">
+    <text x="92" y="90.4" fill="#1f2937" font-size="28" font-weight="700"
+      text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">5,639</text>
+    <text x="92" y="109.76" fill="#6b7280" font-size="13" font-weight="500"
+      text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">Total Commits</text>
+    </g>
+    <g class="title">
+    <text x="322" y="54.08" fill="#1f2937" font-size="13" font-weight="600"
+      text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">Contributions Last Year</text>
+    </g>
+    
+    <g class="i1">
+    <text x="253" y="81.75999999999999" fill="#1f2937" font-size="19" font-weight="600"
+      text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">3,932</text>
+    <text x="253" y="95.67999999999999" fill="#6b7280" font-size="11"
+      text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">Commits</text>
+    </g>
+    <g class="i2">
+    <text x="391" y="81.75999999999999" fill="#1f2937" font-size="19" font-weight="600"
+      text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">308</text>
+    <text x="391" y="95.67999999999999" fill="#6b7280" font-size="11"
+      text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">PRs</text>
+    </g>
+    <g class="i3">
+    <text x="253" y="121.36000000000001" fill="#1f2937" font-size="19" font-weight="600"
+      text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">175</text>
+    <text x="253" y="135.28" fill="#6b7280" font-size="11"
+      text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">Issues</text>
+    </g>
+    <g class="i4">
+    <text x="391" y="121.36000000000001" fill="#1f2937" font-size="19" font-weight="600"
+      text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">35</text>
+    <text x="391" y="135.28" fill="#6b7280" font-size="11"
+      text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">Reviews</text>
+    </g>
+</svg>
