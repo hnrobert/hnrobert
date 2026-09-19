@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Stats — Robert He</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #0f172a;
+      --border: rgba(255, 255, 255, 0.1);
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #60a5fa;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f1f5f9;
+        --border: rgba(0, 0, 0, 0.08);
+        --text: #1e293b;
+        --muted: #64748b;
+        --accent: #3b82f6;
+      }
+    }
+
+    html[data-theme="dark"] {
+      --bg: #0f172a;
+      --border: rgba(255, 255, 255, 0.1);
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #60a5fa;
+    }
+
+    html[data-theme="light"] {
+      --bg: #f1f5f9;
+      --border: rgba(0, 0, 0, 0.08);
+      --text: #1e293b;
+      --muted: #64748b;
+      --accent: #3b82f6;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      padding: 2rem 1.5rem;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .gh-link {
+      font-size: 0.85rem;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .gh-link:hover {
+      text-decoration: underline;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .desc {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .tag {
+      display: inline-block;
+      background: rgba(96, 165, 250, 0.15);
+      color: var(--accent);
+      border: 1px solid rgba(96, 165, 250, 0.3);
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 1px 7px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    .theme-toggle {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .theme-btn {
+      padding: 0.3rem 0.85rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+
+    .theme-btn:hover {
+      color: var(--text);
+      border-color: var(--accent);
+    }
+
+    .theme-btn.active {
+      background: rgba(96, 165, 250, 0.15);
+      color: var(--accent);
+      border-color: rgba(96, 165, 250, 0.4);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 110fr 110fr 256fr;
+      gap: 1.25rem;
+      align-items: end;
+    }
+
+    @media (max-width: 640px) {
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .resizable {
+      resize: horizontal;
+      overflow: hidden;
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      min-width: 280px;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .resize-hint {
+      color: var(--muted);
+      font-size: 0.78rem;
+      margin-bottom: 1rem;
+    }
+
+    .spacer {
+      margin-top: 1.25rem;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h1>GitHub Stats — Robert He</h1>
+    <a class="gh-link" href="https://github.com/hnrobert" target="_blank">@hnrobert ↗</a>
+    <a class="gh-link" href="https://github.com/hnrobert/github-stats-enhanced" target="_blank">@hnrobert/github-stats-enhanced ↗</a>
+  </div>
+
+  <div class="theme-toggle">
+    <button class="theme-btn active" data-theme="auto" onclick="setTheme('auto')">Auto</button>
+    <button class="theme-btn" data-theme="light" onclick="setTheme('light')">Light</button>
+    <button class="theme-btn" data-theme="dark" onclick="setTheme('dark')">Dark</button>
+  </div>
+
+  <h2>Cards</h2>
+  <p class="desc">Auto dark / light theme, scales with container width.</p>
+  <div class="resizable">
+    <div class="stats-grid">
+      <picture>
+        <source class="dark-src" media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hnrobert/hnrobert/github-stats-enhanced/stats1-dark.svg">
+        <img src="https://raw.githubusercontent.com/hnrobert/hnrobert/github-stats-enhanced/stats1-light.svg" alt="Stats 1">
+      </picture>
+      <picture>
+        <source class="dark-src" media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hnrobert/hnrobert/github-stats-enhanced/stats2-dark.svg">
+        <img src="https://raw.githubusercontent.com/hnrobert/hnrobert/github-stats-enhanced/stats2-light.svg" alt="Stats 2">
+      </picture>
+      <picture>
+        <source class="dark-src" media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hnrobert/hnrobert/github-stats-enhanced/contributions-dark.svg">
+        <img src="https://raw.githubusercontent.com/hnrobert/hnrobert/github-stats-enhanced/contributions-light.svg" alt="Contributions">
+      </picture>
+    </div>
+    <div class="spacer">
+      <picture>
+        <source class="dark-src" media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hnrobert/hnrobert/github-stats-enhanced/languages-dark.svg">
+        <img src="https://raw.githubusercontent.com/hnrobert/hnrobert/github-stats-enhanced/languages-light.svg" alt="Languages">
+      </picture>
+    </div>
+  </div>
+
+  <script>
+    function setTheme(theme) {
+      document.querySelectorAll('.theme-btn').forEach(b => b.classList.toggle('active', b.dataset.theme === theme));
+      const sources = document.querySelectorAll('picture source.dark-src');
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        sources.forEach(s => s.media = 'all');
+      } else if (theme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        sources.forEach(s => s.media = 'not all');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+        sources.forEach(s => s.media = '(prefers-color-scheme: dark)');
+      }
+      sources.forEach(s => { const m = s.media; s.media = ''; s.media = m; });
+    }
+  </script>
+</body>
+
+</html>
